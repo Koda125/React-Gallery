@@ -7,6 +7,10 @@ function App() {
     console.log('Place holder to use function in fetch for time being.')
   }
 
+  useEffect(() => {
+    fetchGallery()
+  }, []);
+
   function fetchGallery( ) {
     console.log('Fetching the gallery')
     Axios({
