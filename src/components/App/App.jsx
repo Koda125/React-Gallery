@@ -1,31 +1,9 @@
 import { useState, useEffect } from "react";
 import Axios from "axios";
+import GalleryList from "../../GalleryList/GalleryList";
 
 function App() {
   
-  function onReady( ) {
-    console.log('Place holder to use function in fetch for time being.')
-  }
-
-  useEffect(() => {
-    fetchGallery()
-  }, []);
-
-  function fetchGallery( ) {
-    console.log('Fetching the gallery')
-    Axios({
-      method: "GET",
-      url: /api/gallery
-    })
-    .then((response) {
-      console.log('Gallery aquired: ', response.data)
-      //Render function:
-      onReady()
-    })
-    .catch((error) {
-      console.log("Oh no! An error has occured: ", error)
-    })
-  }
 
     return (
       <div>
@@ -34,8 +12,9 @@ function App() {
         </header>
 
         <p>The gallery goes here!</p>
-        <img src="images/goat_small.jpg"/>
-        <img src="images/goat_stache.png"/>
+        {/* <img src="images/goat_small.jpg"/>
+        <img src="images/goat_stache.png"/> */}
+        <GalleryList />
       </div>
     );
 }
