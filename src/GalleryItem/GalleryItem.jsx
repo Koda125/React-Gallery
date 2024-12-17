@@ -25,9 +25,13 @@ function GalleryItem( galleryList ) {
       <div>
       
           <h1>{galleryList.galleryList.title}</h1>
-        <div>
-          <p>{galleryList.galleryList.description}</p>
+        <div onClick={()=>{setShowing(!showing)}}>
+          {showing 
+            ?
          <img src={galleryList.galleryList.url} width='300px'/>
+         :
+         <p>{galleryList.galleryList.description}</p>
+         }
          </div>
         
       </div>
