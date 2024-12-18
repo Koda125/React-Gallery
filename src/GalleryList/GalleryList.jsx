@@ -33,7 +33,7 @@ function GalleryList() {
           
           <p>
             {galleryList.map( (galleryList, index)=>(
-              <GalleryItem key={index} galleryList={galleryList}/>
+              <GalleryItem key={index} galleryList={galleryList} fetchGallery={ fetchGallery }/>
             ))}
           </p>
         
