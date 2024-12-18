@@ -37,7 +37,7 @@ function GalleryItem( galleryList, fetchGallery ) {
          }
          
          </div>
-         <p>{likes}</p>
+         
          <p>Likes: {galleryList.galleryList.likes}    Dislikes: {disLikes}</p>
         <button className='Button1' onClick={addLike}>
          👍
